@@ -1,0 +1,69 @@
+/* A small, self-contained stylesheet: no remote fonts or JavaScript required. */
+:root { color-scheme: light; --ink: #142b36; --muted: #586871; --accent: #0c6c70; --line: #d9e0e2; --paper: #fff; --soft: #f1f5f6; }
+* { box-sizing: border-box; }
+html { font-size: 100%; scroll-padding-top: 1.5rem; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 1rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration-color: #93b5b8; text-underline-offset: .2em; text-decoration-thickness: 1px; }
+a:hover { color: var(--accent); text-decoration-color: currentColor; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 1px; }
+img { max-width: 100%; height: auto; }
+.shell { width: min(1120px, calc(100% - 6rem)); margin-inline: auto; }
+.site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem; padding-block: 2rem; border-bottom: 1px solid var(--line); }
+.site-name { font-size: 1.45rem; font-weight: 750; letter-spacing: -.055em; text-decoration: none; }
+.site-name span { color: var(--accent); }
+.site-header nav, .site-footer nav { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; font-size: .9375rem; }
+.site-header nav a { text-decoration: none; }
+.site-header nav a[aria-current] { text-decoration: underline; text-decoration-color: var(--accent); }
+.skip-link { position: fixed; left: 1rem; top: -8rem; z-index: 2; background: var(--ink); color: white; padding: .75rem 1.25rem; }
+.skip-link:focus { top: 1rem; }
+.home-masthead { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding-block: 2.5rem; }
+.eyebrow { font-size: .8125rem; font-weight: 650; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; color: var(--muted); margin: 0 0 .75rem; }
+.bio { margin: 0; font-size: 1.125rem; }
+.portrait { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
+.coast { display: block; width: 100%; aspect-ratio: 5 / 1; object-fit: cover; }
+.home-grid { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 6rem; padding-block: 3.5rem 5rem; }
+.prose { max-width: 700px; min-width: 0; font-size: 1.0625rem; overflow-wrap: anywhere; }
+h1, h2, h3 { line-height: 1.16; }
+.prose h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(2.6rem, 5vw, 4.25rem); letter-spacing: -.055em; margin: 0 0 1.75rem; }
+.prose h2 { font-size: 1.35rem; font-weight: 650; letter-spacing: -.025em; margin: 2.25rem 0 .9rem; }
+.prose h3 { font-size: 1.125rem; margin-top: 1.75rem; }
+.prose p { margin: 0 0 1.25rem; }
+.prose ul, .prose ol { padding-left: 1.35rem; margin-block: 1rem 1.75rem; }
+.prose li { padding-left: .15rem; margin-bottom: .55rem; }
+.prose a { color: var(--accent); }
+.prose blockquote { margin: 2rem 0; border-left: 3px solid var(--accent); padding: .25rem 0 .25rem 1.5rem; color: var(--muted); }
+.prose hr { border: 0; border-top: 1px solid var(--line); margin-block: 2.5rem; }
+.prose code { font-size: .9em; background: var(--soft); padding: .1rem .3rem; border-radius: 3px; }
+.prose pre { overflow-x: auto; padding: 1rem; background: var(--soft); }
+.home-aside { padding-top: .4rem; }
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-list time, .meta { color: var(--muted); font-size: .875rem; }
+.post-list h3 { font-size: 1.125rem; font-weight: 600; margin: .3rem 0 0; line-height: 1.35; }
+.post-list a { text-decoration: none; }
+.post-list a:hover { text-decoration: underline; }
+.compact li { padding-block: 1rem; border-bottom: 1px solid var(--line); }
+.compact li:first-child { padding-top: .3rem; }
+.text-link { display: inline-block; margin-top: 1.2rem; font-size: .9375rem; }
+.project-note { margin-top: 3.25rem; border-top: 2px solid var(--ink); padding-top: 1.25rem; }
+.project-note h3 { font-size: 1.5rem; font-weight: 600; margin: .75rem 0; }
+.project-note h3 a { text-decoration: none; }
+.project-note p { color: var(--muted); font-size: .9375rem; margin: 0; }
+.reading-page { padding-block: 4rem 5rem; }
+.reading-page .prose { margin-inline: auto; }
+.reading-page .eyebrow { margin-bottom: 1.25rem; }
+.prose .meta { margin-top: -1rem; margin-bottom: 2.5rem; }
+.prose .lede { font-size: 1.3rem; line-height: 1.55; color: var(--muted); margin-bottom: 2rem; }
+.prose .notice { background: var(--soft); border-left: 3px solid var(--accent); padding: 1rem 1.25rem; margin-block: 2rem; font-size: 1rem; }
+.prose .policy-links { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.prose .archive { padding: 0; }
+.archive li { padding: 1.75rem 0; margin: 0; border-bottom: 1px solid var(--line); }
+.archive h2 { margin: .5rem 0 .75rem; font-size: 1.6rem; }
+.archive p { margin: 0; color: var(--muted); }
+.article-end { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem; padding-block: 1.75rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
+.site-footer p { margin: 0; }
+.site-footer nav { gap: 1.25rem; font-size: .875rem; }
+@media (max-width: 850px) { .shell { width: calc(100% - 3rem); } .home-grid { gap: 3rem; grid-template-columns: minmax(0, 1fr) 220px; } }
+@media (max-width: 650px) { .shell { width: calc(100% - 2.5rem); } .site-header { padding-block: 1.3rem; gap: 1rem; } .site-header nav { gap: 1rem; font-size: .875rem; } .site-name { font-size: 1.25rem; } .home-masthead { padding-block: 1.75rem; } .bio { font-size: 1rem; max-width: 16rem; } .portrait { width: 52px; height: 52px; } .coast { aspect-ratio: 2.7 / 1; } .home-grid { grid-template-columns: 1fr; gap: 2.5rem; padding-block: 2.5rem 3rem; } .home-aside { padding-top: 2rem; border-top: 1px solid var(--line); } .prose { font-size: 1.0625rem; } .prose h1 { font-size: 2.8rem; } .reading-page { padding-block: 2.75rem 3rem; } .prose .lede { font-size: 1.2rem; } .site-footer { padding-bottom: 2rem; } }
+@media (max-width: 360px) { .site-header { align-items: flex-start; flex-direction: column; gap: .75rem; } }
+@media print { .site-header nav, .site-footer, .home-aside, .skip-link { display: none; } .shell { width: 100%; } .home-grid { display: block; } .reading-page { padding-block: 1rem; } .prose { max-width: none; } }

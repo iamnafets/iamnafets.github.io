@@ -1,1 +1,9 @@
-<span>&copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/">Minimal Mistakes</a> theme.</span>
+<footer class="site-footer shell">
+  <p>© {{ site.time | date: '%Y' }} Stefan Mai</p>
+  <nav aria-label="Footer navigation">
+    <a href="https://github.com/{{ site.owner.github }}">GitHub</a>
+    <a href="https://www.linkedin.com/in/{{ site.owner.linkedin }}/">LinkedIn</a>
+    <a href="https://twitter.com/{{ site.owner.twitter }}">Twitter</a>
+    <a href="mailto:{{ site.owner.email }}">Email</a>
+  </nav>
+</footer>

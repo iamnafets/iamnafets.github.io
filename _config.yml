@@ -1,8 +1,8 @@
-title:            Naf Blog
-tagline:          A short tagline
-description:      Describe your website.
-#Comment out url when working locally to resolve base urls correctly
-url:              http://iamnafets.github.io
+title:            Stefan Mai
+tagline:          Spends too much time on the internet.
+description:      Notes and personal projects by Stefan Mai.
+url:              https://www.iamnafets.com
+baseurl:          ""
 
 # Owner/author information
 owner:
@@ -31,12 +31,14 @@ bing_verify:
 # For external links add external: true
 links:
   - title: Posts
-    url: /posts
+    url: /posts/
+  - title: nafhud
+    url: /nafhud/
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Los_Angeles
 future:      true
-pygments:    true
+highlighter: rouge
 markdown:    kramdown
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
@@ -47,14 +49,6 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: false
-
-  coderay:
-    coderay_line_numbers: 
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "README.md", "Gemfile", "Gemfile.lock"]
