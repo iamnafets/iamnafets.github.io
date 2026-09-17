@@ -12,9 +12,3 @@ Some people write to discover themselves. This is hard for me to believe --- eve
 The cool thing about maintaining a long train of rubbish on the internet is tracking the evolution of a viewpoint. Too often people emphatically define who they are in a given moment without fully acknowledging the constant of change.
 
 Each post is not much better at identifying me than the post before. But the themes that fall out point to where I will be.
-
-## What you might learn from me
-
-* Pop culture is generally harmful, but means well.
-* Most things can be modelled, somehow. This knowledge is of no practical use.
-* Complexity permeates everything.

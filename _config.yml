@@ -1,6 +1,6 @@
 title:            Stefan Mai
-tagline:          Spends too much time on the internet.
-description:      Notes and personal projects by Stefan Mai.
+tagline:          The personal blog of Stefan Mai.
+description:      The personal blog of Stefan Mai.
 url:              https://www.iamnafets.com
 baseurl:          ""
 
@@ -8,7 +8,10 @@ baseurl:          ""
 owner:
   name:           Stefan Mai
   avatar:         profile.jpg
-  bio:            "Spends too much time on the internet."
+  bio: >-
+    I’m Stefan Mai, cofounder of <a href="https://www.hellointerview.com">Hello Interview</a>,
+    software engineer, and dad of three. This is where I write things down and occasionally
+    change my mind.
   email:          iamnafets@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter: iamnafets        
@@ -32,8 +35,6 @@ bing_verify:
 links:
   - title: Posts
     url: /posts/
-  - title: nafhud
-    url: /nafhud/
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Los_Angeles

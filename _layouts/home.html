@@ -3,30 +3,27 @@ layout: default
 ---
 <main id="main" class="shell">
   <div class="home-masthead">
-    <div><p class="eyebrow">Notes &amp; personal projects</p><p class="bio">{{ site.owner.bio }}</p></div>
+    <p class="bio">{{ site.owner.bio }}</p>
     <img class="portrait" src="{{ '/images/profile.jpg' | relative_url }}" width="80" height="80" alt="Stefan Mai">
   </div>
   <img class="coast" src="{{ '/images/background.jpg' | relative_url }}" width="1993" height="515" alt="Sunlight over waves along a rocky coastline">
-  <div class="home-grid">
+  <div class="home-content">
     <article class="prose">
       <h1>{{ page.title }}</h1>
       {{ content }}
     </article>
-    <aside class="home-aside" aria-label="Explore">
-      <section>
-        <h2 class="eyebrow">Writing</h2>
-        <ol class="post-list compact">
-          {% for post in site.posts limit:5 %}
-          <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %Y' }}</time><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3></li>
-          {% endfor %}
-        </ol>
-        <a class="text-link" href="{{ '/posts/' | relative_url }}">All posts <span aria-hidden="true">↗</span></a>
-      </section>
-      <section class="project-note">
-        <h2 class="eyebrow">Personal project</h2>
-        <h3><a href="{{ '/nafhud/' | relative_url }}">nafhud <span aria-hidden="true">↗</span></a></h3>
-        <p>A personal workspace for tasks, agent sessions, and follow-ups on Mac and iPhone.</p>
-      </section>
-    </aside>
+    <section class="home-writing" aria-labelledby="writing-heading">
+      <h2 class="eyebrow" id="writing-heading">Writing</h2>
+      <ol class="post-list">
+        {% for post in site.posts limit:5 %}
+        <li>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 35 }}</p>
+        </li>
+        {% endfor %}
+      </ol>
+      <a class="text-link" href="{{ '/posts/' | relative_url }}">All posts <span aria-hidden="true">↗</span></a>
+    </section>
   </div>
 </main>
